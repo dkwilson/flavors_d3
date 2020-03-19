@@ -20,6 +20,19 @@
       header {
         margin-bottom: 40px;
       }
+      .tip {
+          padding: 10px;
+          background: #333;
+          color: #fff;
+      }
+      .tip .delete{
+          color: yellowgreen;
+          font-size: 0.8em;
+      }
+      .flavor, .quantity {
+          font-size: 1.2em;
+          text-align: center;
+      }
     </style>
   </head>
   <body class="green lighten-4">
@@ -61,6 +74,13 @@
       </div>
     </div>
 
+    <footer class="green darken-2 section">
+        <div class="container">
+            <p class="center grey-text text-lighten-2">Copyright &copy; 2020</p>
+        </div>
+        
+    </footer>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
@@ -90,6 +110,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
     <script src="index.js"></script>
     <script src="graph.js"></script>
   </body>
