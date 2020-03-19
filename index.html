@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"
+    />
+    <title>D3 Wing Tracker</title>
+    <style>
+      h2,
+      p {
+        margin: 10px 0;
+      }
+      header {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body class="green lighten-4">
+    <header class="green darken-2 section">
+      <h2 class="center white-text">D3 Wing Tracker</h2>
+      <p class="flow-text grey-text text-lighten-2 center">
+        Track Your Chicken Wing Preferences in Real-Time!!
+      </p>
+    </header>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col s12 m6">
+          <form class="card z-depth-0" id="form">
+            <div class="card-content">
+              <span class="card-title grey-text text-darken-2">Add Wings:</span>
+              <div class="input-field">
+                <input type="text" id="flavor" />
+                <label for="flavor">What Flavor?</label>
+              </div>
+              <div class="input-field">
+                <input type="number" id="quantity" />
+                <label for="quantity">How Many Did You Eat?</label>
+              </div>
+              <div class="input-field center">
+                <button class="btn-large amber darken-4 white-text">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+              <div class="input-field center">
+                <p class="red-text" id="error"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12 m6 push-m1">
+          <div class="canvas"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBvKb70jnQZMdqVa8Ws0QCp_GQfmtwigL8",
+        authDomain: "d3-demo-78a42.firebaseapp.com",
+        databaseURL: "https://d3-demo-78a42.firebaseio.com",
+        projectId: "d3-demo-78a42",
+        storageBucket: "d3-demo-78a42.appspot.com",
+        messagingSenderId: "42207395707",
+        appId: "1:42207395707:web:db5812e8723829c0afc7de",
+        measurementId: "G-Y5P8FWB6KZ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+  </body>
+</html>
